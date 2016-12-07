@@ -6,14 +6,39 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "barryvdh/laravel-ide-helper": "^2.1",
+        "infyomlabs/laravel-generator": "5.2.x-dev",
+        "laravelcollective/html": "5.2.*",
+        "infyomlabs/adminlte-templates": "5.2.x-dev",
+        "infyomlabs/swagger-generator": "dev-master",
+        "jlapp/swaggervel": "dev-master",
+        "doctrine/dbal": "^2.5",
+        "laracasts/flash": "^2.0",
+        "rap2hpoutre/laravel-log-viewer": "^0.5.3",
+        "cviebrock/eloquent-sluggable": "^3.1", 
+        "intervention/image": "^2.3",
+        "intervention/imagecache": "^2.3",
+        "caffeinated/menus": "^2.3",
+        "webpatser/laravel-uuid": "^2.0",
+        "barryvdh/reflection-docblock": "^2.0",
+        "paypal/rest-api-sdk-php": "*",
+        "prettus/l5-repository": "^2.6",
+        "evercode1/view-maker": "^3.5",
+        "lavary/laravel-menu": "^1.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
+        "orangehill/iseed": "dev-master",
+        "mpociot/laravel-test-factory-helper": "^0.3.1",
+        "squizlabs/php_codesniffer": "^2.6",
+        "php-console/laravel-service-provider": "^5.1",
         "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "laracasts/generators": "^1.1"
     },
     "autoload": {
         "classmap": [
@@ -36,13 +61,11 @@
             "php artisan key:generate"
         ],
         "post-install-cmd": [
-            "php artisan clear-compiled",
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan optimize"
         ],
-        "pre-update-cmd": [
-            "php artisan clear-compiled"
-        ],
         "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
         ]
     },
